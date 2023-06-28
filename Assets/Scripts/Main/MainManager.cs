@@ -70,7 +70,9 @@ public class MainManager : MonoBehaviour
 
     public void GameOver()
     {
-        m_GameOver = true;
-        GameOverText.SetActive(true);
+        //m_GameOver = true;
+        //GameOverText.SetActive(true);
+        SceneManager.LoadScene(0);
+        GameManager.Instance.SaveScore(m_Points);
     }
 }
